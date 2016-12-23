@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-sm-12 col-md-offset-1">
+            <h1>{{ artwork.name }}</h1>
+            <div>
+                {% for annotation in artwork.annotations %}
+                    <button class="btn btn-primary" type="button">
+                    <span class="h2">{{ annotation.label }} <span class="badge">{{ annotation.score }}</span></span>
+                    </button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

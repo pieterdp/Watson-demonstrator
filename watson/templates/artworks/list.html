@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+            <ul class="list-group">
+                {% for artwork in artworks %}
+                    <li class="list-group-item"><span class="h2"><a href="{{ url_for('site.v_document_annotations', document_id=artwork.name) }}">{{ artwork.label }}</a></span></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    </div>
+{% endblock %}
